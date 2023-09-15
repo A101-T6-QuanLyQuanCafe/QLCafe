@@ -1,7 +1,11 @@
-Phần Mềm Quản Lý Quán Cafe
+Đề Tài : Phần Mềm Quản Lý Quán Cafe
+
+
 Thành Viên
   + Trần Thanh Lân - 2001200250
   + Lưu Hoàng Thương - 2001200257
+
+
 CHỨC NĂNG ĐỀ TÀI :
   + Quản lý nguyên liệu (Lưu Hoàng Thương)
   + Quản lý nhân viên(Lưu Hoàng Thương)
