@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>0d1f9372-9b00-44df-9814-bbdcb6e7999d</ProjectGuid>
+    <ProjectGuid>{EC20E882-4243-48C4-ACF0-EC342873CF06}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GUI</RootNamespace>
@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DAL">
+      <HintPath>..\DAL\bin\Debug\DAL.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,14 +47,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNHANVIEN.Designer.cs">
+      <DependentUpon>QLNHANVIEN.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNHANVIEN.resx">
+      <DependentUpon>QLNHANVIEN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -60,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -73,6 +89,234 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18764668.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bar Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emart7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaithuong.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hang1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hang2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hang3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hang4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hang5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hang6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hang7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hang8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH06.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH07.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH08.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH09.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HNV01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HNV02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pie Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThanhToan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

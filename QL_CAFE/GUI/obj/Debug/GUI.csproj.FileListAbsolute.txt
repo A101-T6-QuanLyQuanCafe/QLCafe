@@ -1,1 +1,12 @@
 D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\bin\Debug\GUI.exe.config
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\bin\Debug\GUI.exe
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\bin\Debug\GUI.pdb
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Debug\GUI.Main.resources
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Debug\GUI.exe
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Debug\GUI.pdb
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\bin\Debug\DAL.dll
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\bin\Debug\DAL.pdb
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Debug\GUI.QLNHANVIEN.resources
