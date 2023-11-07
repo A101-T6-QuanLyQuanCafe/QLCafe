@@ -53,6 +53,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLNGUYENLIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNGUYENLIEU.Designer.cs">
+      <DependentUpon>QLNGUYENLIEU.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLNHANVIEN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNGUYENLIEU.resx">
+      <DependentUpon>QLNGUYENLIEU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLNHANVIEN.resx">
       <DependentUpon>QLNHANVIEN.cs</DependentUpon>

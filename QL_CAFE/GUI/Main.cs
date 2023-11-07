@@ -29,5 +29,12 @@ namespace GUI
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void nGUYÊNLIỆUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLNGUYENLIEU frm = new QLNGUYENLIEU();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
