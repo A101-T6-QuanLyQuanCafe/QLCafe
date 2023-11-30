@@ -45,6 +45,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.bÁNHÀNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +56,8 @@
             this.qUẢNLÝToolStripMenuItem,
             this.dANHMỤCToolStripMenuItem,
             this.bÁOCÁOToolStripMenuItem,
-            this.kHOHÀNGToolStripMenuItem});
+            this.kHOHÀNGToolStripMenuItem,
+            this.bÁNHÀNGToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(851, 40);
@@ -165,17 +167,26 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 563);
+            this.statusStrip.Location = new System.Drawing.Point(0, 552);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(851, 22);
+            this.statusStrip.Size = new System.Drawing.Size(851, 33);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
             // toolStripStatusLabel
             // 
+            this.toolStripStatusLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(71, 28);
             this.toolStripStatusLabel.Text = "Status";
+            // 
+            // bÁNHÀNGToolStripMenuItem
+            // 
+            this.bÁNHÀNGToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.bÁNHÀNGToolStripMenuItem.Name = "bÁNHÀNGToolStripMenuItem";
+            this.bÁNHÀNGToolStripMenuItem.Size = new System.Drawing.Size(156, 36);
+            this.bÁNHÀNGToolStripMenuItem.Text = "BÁN HÀNG";
+            this.bÁNHÀNGToolStripMenuItem.Click += new System.EventHandler(this.bÁNHÀNGToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -216,6 +227,7 @@
         private System.Windows.Forms.ToolStripMenuItem nGUYÊNLIỆUToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nHẬPNGUYÊNLIỆUToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nHÀCUNGCẤPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bÁNHÀNGToolStripMenuItem;
     }
 }
 

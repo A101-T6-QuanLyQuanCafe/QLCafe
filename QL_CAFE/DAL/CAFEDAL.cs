@@ -15,10 +15,22 @@ namespace DAL
             var data = (from dt in ql.LOAISANPHAMs select dt).ToList();
             return data;
         }
+        public List<MATHANG> getmathang()
+        {
+
+            var data = (from dt in ql.MATHANGs select dt).ToList();
+            return data;
+        }
         public List<NHANVIEN> getnhanvien()
         {
 
             var data = (from dt in ql.NHANVIENs select dt).ToList();
+            return data;
+        }
+        public List<CHITIETHOADON> getcthd(int ma)
+        {
+
+            var data = (from dt in ql.CHITIETHOADONs where dt.MAHD == ma select dt).ToList();
             return data;
         }
         public List<NGUYENLIEU> getnguyenlieu()
@@ -39,12 +51,90 @@ namespace DAL
             var data = (from dt in ql.VAITROs select dt).ToList();
             return data;
         }
+
+        public int getvtdn(int ma)
+        {
+            var data = (from dt in ql.NHANVIENs where dt.MANV == ma select dt.MAVT);
+            //var data = ql.NHANVIENs.Where(t => t.MANV == ma).FirstOrDefault();
+            //int kq = int.Parse(data);
+            int vt = 0;
+            foreach (int kq in data)
+            {
+                vt = kq;
+            }
+            return vt;
+        }
+        public VAITRO getvttheoma(int ma)
+        {
+            var data = (from dt in ql.VAITROs where dt.MAVT == ma select dt).FirstOrDefault();
+            return data;
+        }
+
+        public HOADON gethoadoncuoi()
+        {
+            var last = ql.HOADONs.OrderByDescending(r => r.MAHD).FirstOrDefault();
+            return last;
+        }
+        public int getgiamh(int ma)
+        {
+            var data = (from dt in ql.MATHANGs where dt.MAMH == ma select dt.DONGIA);
+            //var data = ql.NHANVIENs.Where(t => t.MANV == ma).FirstOrDefault();
+            //int kq = int.Parse(data);
+            int vt = 0;
+            foreach (int kq in data)
+            {
+                vt = kq;
+            }
+            return vt;
+        }
+        public string gettenmh(int ma)
+        {
+            var data = (from dt in ql.MATHANGs where dt.MAMH == ma select dt.TENMH);
+            //var data = ql.NHANVIENs.Where(t => t.MANV == ma).FirstOrDefault();
+            //int kq = int.Parse(data);
+            string vt = "";
+            foreach (string kq in data)
+            {
+                vt = kq;
+            }
+            return vt;
+        }
         public bool themNV(NHANVIEN n)
         {
             try
             {
                 n.MANV = ql.NHANVIENs.Max(x => x.MANV) + 1;
                 ql.NHANVIENs.InsertOnSubmit(n);
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public bool themHD(HOADON n)
+        {
+            try
+            {
+                n.MAHD = ql.HOADONs.Max(x => x.MAHD) + 1;
+                n.THANHTIEN = 0;
+                ql.HOADONs.InsertOnSubmit(n);
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public bool themCTHD(CHITIETHOADON n)
+        {
+            try
+            {
+                ql.CHITIETHOADONs.InsertOnSubmit(n);
                 ql.SubmitChanges();
                 return true;
             }
@@ -69,6 +159,21 @@ namespace DAL
             }
 
         }
+        public bool xoaCTHD(int ma,int mamh)
+        {
+            try
+            {
+                CHITIETHOADON k = ql.CHITIETHOADONs.Where(t => t.MAHD == ma).Where(t2 => t2.MAMH == mamh).FirstOrDefault();
+                ql.CHITIETHOADONs.DeleteOnSubmit(k);
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
         public bool suaNV(int ma, string ten, string mail, string sdt, string tdn, string mk,int mavt)
         {
             try
@@ -80,6 +185,45 @@ namespace DAL
                 k.TENDANGNHAP = tdn;
                 k.MATKHAU = mk;
                 k.MAVT = mavt;
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+
+        }
+        
+        public bool capnhatTT(int ma)
+        {
+            int tt = 0;
+            try
+            {
+                var data = (from dt in ql.CHITIETHOADONs where dt.MAHD == ma select dt).ToList();
+                foreach (var item in data)
+                {
+                    tt += int.Parse(item.THANHTIEN.ToString());
+                }
+                HOADON k = ql.HOADONs.Where(t => t.MAHD == ma).FirstOrDefault();
+                k.THANHTIEN = tt;
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool suaCTHD(int ma,int mamh, int sl, int dg)
+        {
+            try
+            {
+                CHITIETHOADON k = ql.CHITIETHOADONs.Where(t => t.MAHD == ma).Where(t2 => t2.MAMH == mamh).FirstOrDefault();
+                k.SL = sl;
+                k.DONGIA = dg;
+                k.THANHTIEN = sl * dg;
                 ql.SubmitChanges();
                 return true;
             }
