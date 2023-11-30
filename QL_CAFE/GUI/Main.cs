@@ -48,5 +48,33 @@ namespace GUI
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void mẶTHÀNGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLMATHANG frm = new QLMATHANG();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void hÓAĐƠNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLHOADON frm = new QLHOADON();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void lOẠIMẶTHÀNGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLLOAI frm = new QLLOAI();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void nHÀCUNGCẤPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLNCC frm = new QLNCC();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

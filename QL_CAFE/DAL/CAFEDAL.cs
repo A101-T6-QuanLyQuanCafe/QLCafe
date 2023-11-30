@@ -27,6 +27,18 @@ namespace DAL
             var data = (from dt in ql.NHANVIENs select dt).ToList();
             return data;
         }
+        public List<HOADON> gethoadon()
+        {
+
+            var data = (from dt in ql.HOADONs select dt).ToList();
+            return data;
+        }
+        public List<HOADON> gethoadontheongay(DateTime n)
+        {
+
+            var data = (from dt in ql.HOADONs where dt.NGAYLAP == n select dt).ToList();
+            return data;
+        }
         public List<CHITIETHOADON> getcthd(int ma)
         {
 
@@ -87,6 +99,18 @@ namespace DAL
             }
             return vt;
         }
+        public int gettongdt()
+        {
+            var data = (from dt in ql.HOADONs select dt.THANHTIEN);
+            //var data = ql.NHANVIENs.Where(t => t.MANV == ma).FirstOrDefault();
+            //int kq = int.Parse(data);
+            int vt = 0;
+            foreach (int kq in data)
+            {
+                vt += kq;
+            }
+            return vt;
+        }
         public string gettenmh(int ma)
         {
             var data = (from dt in ql.MATHANGs where dt.MAMH == ma select dt.TENMH);
@@ -114,6 +138,21 @@ namespace DAL
             }
 
         }
+        public bool themMH(MATHANG n)
+        {
+            try
+            {
+                n.MAMH = ql.MATHANGs.Max(x => x.MAMH) + 1;
+                ql.MATHANGs.InsertOnSubmit(n);
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
         public bool themHD(HOADON n)
         {
             try
@@ -121,6 +160,36 @@ namespace DAL
                 n.MAHD = ql.HOADONs.Max(x => x.MAHD) + 1;
                 n.THANHTIEN = 0;
                 ql.HOADONs.InsertOnSubmit(n);
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public bool themLoai(LOAISANPHAM n)
+        {
+            try
+            {
+                n.MALOAI = ql.LOAISANPHAMs.Max(x => x.MALOAI) + 1;
+                ql.LOAISANPHAMs.InsertOnSubmit(n);
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public bool themNCC(NHACUNGCAP n)
+        {
+            try
+            {
+                n.MANCC = ql.NHACUNGCAPs.Max(x => x.MANCC) + 1;
+                ql.NHACUNGCAPs.InsertOnSubmit(n);
                 ql.SubmitChanges();
                 return true;
             }
@@ -159,6 +228,66 @@ namespace DAL
             }
 
         }
+        public bool xoaLoai(int ma)
+        {
+            try
+            {
+                LOAISANPHAM k = ql.LOAISANPHAMs.Where(t => t.MALOAI == ma).FirstOrDefault();
+                ql.LOAISANPHAMs.DeleteOnSubmit(k);
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public bool xoaNCC(int ma)
+        {
+            try
+            {
+                NHACUNGCAP k = ql.NHACUNGCAPs.Where(t => t.MANCC == ma).FirstOrDefault();
+                ql.NHACUNGCAPs.DeleteOnSubmit(k);
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public bool xoaMH(int ma)
+        {
+            try
+            {
+                MATHANG k = ql.MATHANGs.Where(t => t.MAMH == ma).FirstOrDefault();
+                ql.MATHANGs.DeleteOnSubmit(k);
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public bool xoaHD(int ma)
+        {
+            try
+            {
+                HOADON k = ql.HOADONs.Where(t => t.MAHD == ma).FirstOrDefault();
+                ql.HOADONs.DeleteOnSubmit(k);
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
         public bool xoaCTHD(int ma,int mamh)
         {
             try
@@ -185,6 +314,40 @@ namespace DAL
                 k.TENDANGNHAP = tdn;
                 k.MATKHAU = mk;
                 k.MAVT = mavt;
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+
+        }
+        public bool suaLoai(int ma, string ten)
+        {
+            try
+            {
+                LOAISANPHAM k = ql.LOAISANPHAMs.Where(t => t.MALOAI == ma).FirstOrDefault();
+                k.TENLOAI = ten;
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+
+        }
+        public bool suaNCC(int ma, string ten,string sdt,string dc)
+        {
+            try
+            {
+                NHACUNGCAP k = ql.NHACUNGCAPs.Where(t => t.MANCC == ma).FirstOrDefault();
+                k.TENNCC = ten;
+                k.SDT = sdt;
+                k.DIACHI = dc;
                 ql.SubmitChanges();
                 return true;
             }
@@ -273,6 +436,26 @@ namespace DAL
                 k.SOLUONG = sl;
                 k.MANCC = mancc;
                 k.CAPNHATNGAY = cnn;
+                ql.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+
+        }
+        public bool suaMH(int ma, string ten, int dg, string anh, int ml, int mnl)
+        {
+            try
+            {
+                MATHANG k = ql.MATHANGs.Where(t => t.MAMH == ma).FirstOrDefault();
+                k.TENMH = ten;
+                k.DONGIA = dg;
+                k.ANH = anh;
+                k.MALOAI = ml;
+                k.MANL = mnl;
                 ql.SubmitChanges();
                 return true;
             }

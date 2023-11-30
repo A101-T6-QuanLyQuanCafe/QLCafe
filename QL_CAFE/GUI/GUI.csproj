@@ -65,6 +65,30 @@
     <Compile Include="QLBANHANG.Designer.cs">
       <DependentUpon>QLBANHANG.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLHOADON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLHOADON.Designer.cs">
+      <DependentUpon>QLHOADON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLLOAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLLOAI.Designer.cs">
+      <DependentUpon>QLLOAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLMATHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLMATHANG.Designer.cs">
+      <DependentUpon>QLMATHANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNCC.Designer.cs">
+      <DependentUpon>QLNCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLNGUYENLIEU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +111,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLBANHANG.resx">
       <DependentUpon>QLBANHANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLHOADON.resx">
+      <DependentUpon>QLHOADON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLLOAI.resx">
+      <DependentUpon>QLLOAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLMATHANG.resx">
+      <DependentUpon>QLMATHANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNCC.resx">
+      <DependentUpon>QLNCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLNGUYENLIEU.resx">
       <DependentUpon>QLNGUYENLIEU.cs</DependentUpon>

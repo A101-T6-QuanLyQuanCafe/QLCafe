@@ -13,3 +13,5 @@ D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Release\GUI.Properties.Resources.reso
 D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Release\GUI.csproj.GenerateResource.Cache
 D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Release\GUI.exe
 D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Release\GUI.pdb
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Release\GUI.QLMATHANG.resources
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Release\GUI.QLHOADON.resources
