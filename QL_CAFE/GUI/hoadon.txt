@@ -1,0 +1,13 @@
+		    CAFE QUÁN
+		HÓA ĐƠN THANH TOÁN
+TÊN NHÂN VIÊN : TRẦN THANH LÂN 
+TênMón	        SL       ĐG     T.Tiền
+***************************************
+Cafe sữa	1	18000	18000
+Bạc Xỉu	1	20000	20000
+Epresso Machiato	4	35000	140000
+Epresso Panna	1	35000	35000
+Machiato	3	36000	108000
+***************************************
+TỔNG CỘNG                      321000
+CHÚC QUÝ KHÁCH VUI VẺ, HẸN GẶP LẠI

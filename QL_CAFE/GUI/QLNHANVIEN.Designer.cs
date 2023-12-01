@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_luu = new System.Windows.Forms.Button();
             this.btn_dong = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
@@ -39,19 +40,18 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.cb_vt = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_mk = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_tdn = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_sdt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_email = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_ten = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_ma = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_luu = new System.Windows.Forms.Button();
+            this.txt_sdt = new CustomControls.txtsdt();
+            this.txt_email = new CustomControls.txtemail();
+            this.txt_ten = new CustomControls.txtuser();
+            this.txt_tdn = new CustomControls.txtuser();
+            this.txt_mk = new CustomControls.txtuser();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,6 +69,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(871, 61);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_luu
+            // 
+            this.btn_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_luu.Image = global::GUI.Properties.Resources.Load;
+            this.btn_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_luu.Location = new System.Drawing.Point(432, 6);
+            this.btn_luu.Name = "btn_luu";
+            this.btn_luu.Size = new System.Drawing.Size(137, 55);
+            this.btn_luu.TabIndex = 4;
+            this.btn_luu.Text = "LƯU";
+            this.btn_luu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_luu.UseVisualStyleBackColor = true;
+            this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
             // 
             // btn_dong
             // 
@@ -155,17 +169,17 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txt_mk);
+            this.panel3.Controls.Add(this.txt_tdn);
+            this.panel3.Controls.Add(this.txt_ten);
+            this.panel3.Controls.Add(this.txt_email);
+            this.panel3.Controls.Add(this.txt_sdt);
             this.panel3.Controls.Add(this.cb_vt);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.txt_mk);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.txt_tdn);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.txt_sdt);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.txt_email);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.txt_ten);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.txt_ma);
             this.panel3.Controls.Add(this.label2);
@@ -192,14 +206,6 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "VAI TRÒ";
             // 
-            // txt_mk
-            // 
-            this.txt_mk.Location = new System.Drawing.Point(609, 129);
-            this.txt_mk.Multiline = true;
-            this.txt_mk.Name = "txt_mk";
-            this.txt_mk.Size = new System.Drawing.Size(181, 39);
-            this.txt_mk.TabIndex = 11;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -211,14 +217,6 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "MẬT KHẨU";
             // 
-            // txt_tdn
-            // 
-            this.txt_tdn.Location = new System.Drawing.Point(188, 129);
-            this.txt_tdn.Multiline = true;
-            this.txt_tdn.Name = "txt_tdn";
-            this.txt_tdn.Size = new System.Drawing.Size(200, 39);
-            this.txt_tdn.TabIndex = 9;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -228,14 +226,6 @@
             this.label7.Size = new System.Drawing.Size(172, 22);
             this.label7.TabIndex = 8;
             this.label7.Text = "TÊN ĐĂNG NHẬP";
-            // 
-            // txt_sdt
-            // 
-            this.txt_sdt.Location = new System.Drawing.Point(609, 68);
-            this.txt_sdt.Multiline = true;
-            this.txt_sdt.Name = "txt_sdt";
-            this.txt_sdt.Size = new System.Drawing.Size(181, 39);
-            this.txt_sdt.TabIndex = 7;
             // 
             // label5
             // 
@@ -247,14 +237,6 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "SĐT";
             // 
-            // txt_email
-            // 
-            this.txt_email.Location = new System.Drawing.Point(188, 68);
-            this.txt_email.Multiline = true;
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(200, 39);
-            this.txt_email.TabIndex = 5;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -264,14 +246,6 @@
             this.label4.Size = new System.Drawing.Size(67, 22);
             this.label4.TabIndex = 4;
             this.label4.Text = "EMAIL";
-            // 
-            // txt_ten
-            // 
-            this.txt_ten.Location = new System.Drawing.Point(609, 8);
-            this.txt_ten.Multiline = true;
-            this.txt_ten.Name = "txt_ten";
-            this.txt_ten.Size = new System.Drawing.Size(181, 39);
-            this.txt_ten.TabIndex = 3;
             // 
             // label3
             // 
@@ -303,19 +277,45 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "MÃ NHÂN VIÊN*";
             // 
-            // btn_luu
+            // txt_sdt
             // 
-            this.btn_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_luu.Image = global::GUI.Properties.Resources.Load;
-            this.btn_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_luu.Location = new System.Drawing.Point(432, 6);
-            this.btn_luu.Name = "btn_luu";
-            this.btn_luu.Size = new System.Drawing.Size(137, 55);
-            this.btn_luu.TabIndex = 4;
-            this.btn_luu.Text = "LƯU";
-            this.btn_luu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_luu.UseVisualStyleBackColor = true;
-            this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
+            this.txt_sdt.Location = new System.Drawing.Point(609, 66);
+            this.txt_sdt.Multiline = true;
+            this.txt_sdt.Name = "txt_sdt";
+            this.txt_sdt.Size = new System.Drawing.Size(181, 41);
+            this.txt_sdt.TabIndex = 14;
+            // 
+            // txt_email
+            // 
+            this.txt_email.Location = new System.Drawing.Point(188, 66);
+            this.txt_email.Multiline = true;
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(200, 41);
+            this.txt_email.TabIndex = 15;
+            // 
+            // txt_ten
+            // 
+            this.txt_ten.Location = new System.Drawing.Point(609, 7);
+            this.txt_ten.Multiline = true;
+            this.txt_ten.Name = "txt_ten";
+            this.txt_ten.Size = new System.Drawing.Size(181, 40);
+            this.txt_ten.TabIndex = 16;
+            // 
+            // txt_tdn
+            // 
+            this.txt_tdn.Location = new System.Drawing.Point(188, 126);
+            this.txt_tdn.Multiline = true;
+            this.txt_tdn.Name = "txt_tdn";
+            this.txt_tdn.Size = new System.Drawing.Size(200, 33);
+            this.txt_tdn.TabIndex = 17;
+            // 
+            // txt_mk
+            // 
+            this.txt_mk.Location = new System.Drawing.Point(609, 126);
+            this.txt_mk.Multiline = true;
+            this.txt_mk.Name = "txt_mk";
+            this.txt_mk.Size = new System.Drawing.Size(181, 44);
+            this.txt_mk.TabIndex = 18;
             // 
             // QLNHANVIEN
             // 
@@ -352,18 +352,18 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox cb_vt;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_mk;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_tdn;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_sdt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_ten;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_ma;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_luu;
+        private CustomControls.txtsdt txt_sdt;
+        private CustomControls.txtemail txt_email;
+        private CustomControls.txtuser txt_ten;
+        private CustomControls.txtuser txt_mk;
+        private CustomControls.txtuser txt_tdn;
     }
 }

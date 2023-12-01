@@ -78,6 +78,7 @@
             this.btn_dong.Text = "ĐÓNG";
             this.btn_dong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_dong.UseVisualStyleBackColor = true;
+            this.btn_dong.Click += new System.EventHandler(this.btn_dong_Click);
             // 
             // btn_sua
             // 

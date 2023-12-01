@@ -81,7 +81,7 @@ namespace GUI
             n.MANV = DangNhap.manv;
             if (dal.themHD(n) == true)
             {
-                MessageBox.Show("Them thanh cong");
+                MessageBox.Show("Đã tạo đơn","TẠO HÓA ĐƠN",MessageBoxButtons.OK);
             }
             else
                 MessageBox.Show("Them that bai");
@@ -132,6 +132,29 @@ namespace GUI
                 }
 
             }
+        }
+        private void btn_thanhtoan_Click(object sender, EventArgs e)
+        {
+            List<CHITIETHOADON> hd = dal.getcthd(int.Parse(txt_mahd.Text));
+            var texcontent = "\t\t    CAFE QUÁN\n\t\tHÓA ĐƠN THANH TOÁN\nTÊN NHÂN VIÊN : "+DangNhap.tennv
+                +" \nTênMón\t        SL       ĐG     T.Tiền\n";
+            texcontent += "***************************************\n";
+            var file = new StreamWriter("hoadon.txt");
+            foreach (CHITIETHOADON item in hd)
+            {
+                texcontent += dal.gettenmh(item.MAMH) + "\t"
+                    + item.SL.ToString() + "\t" + item.DONGIA.ToString() + "\t"
+                    + item.THANHTIEN.ToString();
+
+                texcontent += "\n";
+            }
+            texcontent += "***************************************\n";
+            texcontent += "TỔNG CỘNG                  "+ dal.gettongtien(int.Parse(txt_mahd.Text)) + " VNĐ\nCHÚC QUÝ KHÁCH VUI VẺ, HẸN GẶP LẠI";
+
+            File.WriteAllText("D:\\PTPMUDTM\\QL_CAFE\\QLCafe\\QL_CAFE\\GUI\\hoadon.txt", texcontent);
+            MessageBox.Show("Thanh toán thành công");
+            txt_mahd.Text = "";
+            dataGridView1.DataSource = null;
         }
     }
 }

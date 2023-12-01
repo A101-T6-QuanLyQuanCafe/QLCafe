@@ -76,5 +76,16 @@ namespace GUI
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn đăng xuất !!", "ĐĂNG XUẤT", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Hide();
+                DangNhap f = new DangNhap();
+                f.Show();
+            }
+            
+        }
     }
 }

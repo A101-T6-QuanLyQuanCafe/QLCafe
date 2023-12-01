@@ -120,5 +120,10 @@ namespace GUI
             txt_sl.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             cb_ncc.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[2].Value;
         }
+
+        private void btn_dong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

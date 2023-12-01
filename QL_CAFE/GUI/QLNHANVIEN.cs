@@ -96,7 +96,7 @@ namespace GUI
 
         private void btn_dong_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

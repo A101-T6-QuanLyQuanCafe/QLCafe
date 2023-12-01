@@ -41,6 +41,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_chonanh = new System.Windows.Forms.Button();
+            this.cb_nl = new System.Windows.Forms.ComboBox();
+            this.cb_loai = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_luu = new System.Windows.Forms.Button();
@@ -48,16 +52,12 @@
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
-            this.cb_loai = new System.Windows.Forms.ComboBox();
-            this.cb_nl = new System.Windows.Forms.ComboBox();
-            this.btn_chonanh = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -194,6 +194,42 @@
             this.panel3.Size = new System.Drawing.Size(868, 216);
             this.panel3.TabIndex = 7;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(588, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(265, 205);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_chonanh
+            // 
+            this.btn_chonanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_chonanh.Location = new System.Drawing.Point(432, 117);
+            this.btn_chonanh.Name = "btn_chonanh";
+            this.btn_chonanh.Size = new System.Drawing.Size(127, 41);
+            this.btn_chonanh.TabIndex = 13;
+            this.btn_chonanh.Text = "CHỌN";
+            this.btn_chonanh.UseVisualStyleBackColor = true;
+            this.btn_chonanh.Click += new System.EventHandler(this.btn_chonanh_Click);
+            // 
+            // cb_nl
+            // 
+            this.cb_nl.FormattingEnabled = true;
+            this.cb_nl.Location = new System.Drawing.Point(175, 177);
+            this.cb_nl.Name = "cb_nl";
+            this.cb_nl.Size = new System.Drawing.Size(199, 21);
+            this.cb_nl.TabIndex = 12;
+            // 
+            // cb_loai
+            // 
+            this.cb_loai.FormattingEnabled = true;
+            this.cb_loai.Location = new System.Drawing.Point(175, 137);
+            this.cb_loai.Name = "cb_loai";
+            this.cb_loai.Size = new System.Drawing.Size(199, 21);
+            this.cb_loai.TabIndex = 11;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -241,6 +277,7 @@
             this.btn_dong.Text = "ĐÓNG";
             this.btn_dong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_dong.UseVisualStyleBackColor = true;
+            this.btn_dong.Click += new System.EventHandler(this.btn_dong_Click);
             // 
             // btn_sua
             // 
@@ -284,42 +321,6 @@
             this.btn_them.UseVisualStyleBackColor = true;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
-            // cb_loai
-            // 
-            this.cb_loai.FormattingEnabled = true;
-            this.cb_loai.Location = new System.Drawing.Point(175, 137);
-            this.cb_loai.Name = "cb_loai";
-            this.cb_loai.Size = new System.Drawing.Size(199, 21);
-            this.cb_loai.TabIndex = 11;
-            // 
-            // cb_nl
-            // 
-            this.cb_nl.FormattingEnabled = true;
-            this.cb_nl.Location = new System.Drawing.Point(175, 177);
-            this.cb_nl.Name = "cb_nl";
-            this.cb_nl.Size = new System.Drawing.Size(199, 21);
-            this.cb_nl.TabIndex = 12;
-            // 
-            // btn_chonanh
-            // 
-            this.btn_chonanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_chonanh.Location = new System.Drawing.Point(432, 117);
-            this.btn_chonanh.Name = "btn_chonanh";
-            this.btn_chonanh.Size = new System.Drawing.Size(127, 41);
-            this.btn_chonanh.TabIndex = 13;
-            this.btn_chonanh.Text = "CHỌN";
-            this.btn_chonanh.UseVisualStyleBackColor = true;
-            this.btn_chonanh.Click += new System.EventHandler(this.btn_chonanh_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(588, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 205);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -340,9 +341,9 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

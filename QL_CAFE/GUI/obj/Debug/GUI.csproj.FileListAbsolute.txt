@@ -17,3 +17,5 @@ D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Debug\GUI.QLMATHANG.resources
 D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Debug\GUI.QLHOADON.resources
 D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Debug\GUI.QLLOAI.resources
 D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\obj\Debug\GUI.QLNCC.resources
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\bin\Debug\CustomControls.dll
+D:\PTPMUDTM\QL_CAFE\QLCafe\QL_CAFE\GUI\bin\Debug\CustomControls.pdb

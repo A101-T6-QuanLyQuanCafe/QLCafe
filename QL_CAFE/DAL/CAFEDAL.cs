@@ -111,6 +111,18 @@ namespace DAL
             }
             return vt;
         }
+        public int gettongtien(int ma)
+        {
+            var data = (from dt in ql.CHITIETHOADONs where dt.MAHD == ma select dt.THANHTIEN);
+            //var data = ql.NHANVIENs.Where(t => t.MANV == ma).FirstOrDefault();
+            //int kq = int.Parse(data);
+            int vt = 0;
+            foreach (int kq in data)
+            {
+                vt += kq;
+            }
+            return vt;
+        }
         public string gettenmh(int ma)
         {
             var data = (from dt in ql.MATHANGs where dt.MAMH == ma select dt.TENMH);

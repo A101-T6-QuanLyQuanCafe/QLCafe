@@ -136,5 +136,10 @@ namespace GUI
                 pictureBox1.Image = Image.FromFile(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\hinh\\" + dataGridView1.Rows[e.RowIndex].Cells[3].Value);
             }
         }
+
+        private void btn_dong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
