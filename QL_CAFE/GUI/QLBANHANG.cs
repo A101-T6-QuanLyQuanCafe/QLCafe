@@ -30,7 +30,7 @@ namespace GUI
             {
                 Button btn = new Button() { Width = 150, Height = 150 };
                 btn.Click += btn_Click;
-                btn.Text = row.MAMH.ToString();
+                btn.Text = row.MAMH.ToString() + "-" + row.TENMH.ToString();
                 btn.Font = new Font(btn.Font.FontFamily, 11, FontStyle.Bold);
                 btn.ForeColor = Color.Blue;
                 btn.TextAlign = ContentAlignment.BottomCenter;
@@ -49,10 +49,13 @@ namespace GUI
             else
             {
                 Button btn = (Button)sender;
-                gia = dal.getgiamh(int.Parse(btn.Text));
+                string ma = btn.Text;
+                int i = ma.IndexOf("-");
+                ma = ma.Substring(0, i);
+                gia = dal.getgiamh(int.Parse(ma));
                 CHITIETHOADON n = new CHITIETHOADON();
                 n.MAHD = int.Parse(txt_mahd.Text);
-                n.MAMH = int.Parse(btn.Text);
+                n.MAMH = int.Parse(ma);
                 n.SL = 1;
                 n.DONGIA = gia;
                 n.THANHTIEN = n.DONGIA * n.SL;
